@@ -33,22 +33,16 @@ function articleMaker(article) {
   // Append everything to Parent div
   const children = [h2, p, p1, p2, p3, span]
   children.forEach(child => parentDiv.append(child))
-  console.log(parentDiv)
+   // Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
+  // This listener should toggle the class 'article-open' on div.article.
+  span.addEventListener('click', e => parentDiv.classList.add('article-open'))
+
+
 }
 
 articleMaker(data[0])
 
-  // <div class="article">
-  //   <h2>{title of the article}</h2>
-  //   <p class="date">{date of the article}</p>
-
-  //   {three separate paragraph elements}
-
-  //   <span class="expandButton">+</span>
-  // </div>
-
-  // Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
-  // This listener should toggle the class 'article-open' on div.article.
+ 
 
   // Step 3: Don't forget to return something from your function!
 
